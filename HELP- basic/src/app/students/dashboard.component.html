@@ -1,0 +1,483 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-10">
+      <div class="card">
+        <div class="card-header">
+          <h5 class="title">Personal Details</h5>
+        </div>
+        <div class="card-body">
+            <form #userForm="ngForm" (ngSubmit)="onSave(userForm.value)">
+              <mat-horizontal-stepper>
+                <mat-step>                   
+                    <ng-template matStepLabel>General Information</ng-template>                 
+                   
+                      <div class="row">
+                                <div class="col-md-4 pr-1">
+                                  <div class="form-group">
+                                    <label>Enrollment no.</label>
+                                    <input type="text" class="form-control" disabled="" placeholder="Auto-Generated" value="" [(ngModel)]="enr_no" name="enr_no">
+                                  </div>
+                                </div>
+                                <div class="col-md-4 px-1">
+                                  <div class="form-group">
+                                    <label>Standard</label>
+                                    <input type="text" class="form-control" placeholder="Standard" value="" [(ngModel)]="std" name="std"> 
+                                  </div>
+                                </div>
+                                <div class="col-md-4 px-1">
+                                  <div class="form-group">
+                                    <label>Division</label>
+                                    <input type="text" class="form-control" placeholder="Division" name="div" value="" [(ngModel)]="div" name="div">
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 pr-1">
+                              <div class="form-group">
+                                <label>First Name</label>
+                                <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="first_name" name="first_name">
+                              </div>
+                            </div>
+                            <div class="col-md-6 pl-1">
+                              <div class="form-group">
+                                <label>Last Name</label>
+                                <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="last_name" name="last_name">
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row">
+                              <div class="col-md-4 pr-1">
+                                <div class="form-group">
+                                  <label for="email">Email address</label>
+                                  <input name="email" id="email" type="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email">
+                                </div>
+                              </div>
+                              <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                  <label for="birth_date">Birth Date</label>
+                                  <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="birth_date" name="birth_date">
+                                </div>
+                              </div>
+                              <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                  <label for="admission_date">Admission Date</label>
+                                  <input name="admissio_date" id="admission_date" type="date" class="form-control" placeholder="" [(ngModel)]="admission_date" name="admission_date">
+                                </div>
+                              </div>
+                            </div>
+                            
+                            <div class="row">
+                              <div class="col-md-12">
+                                <div class="form-group">
+                                  <label>Address</label>
+                                  <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" [(ngModel)]="address" name="address">
+                                </div>
+                              </div>
+                            </div>
+                            <div class="row">
+                              <div class="col-md-4 pr-1">
+                                <div class="form-group">
+                                  <label>City</label>
+                                  <input type="text" class="form-control" placeholder="City" value="Mike" [(ngModel)]="city" name="city">
+                                </div>
+                              </div>
+                              <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                  <label>Country</label>
+                                  <input type="text" class="form-control" placeholder="Country" value="Andrew" [(ngModel)]="country" name="country">
+                                </div>
+                              </div>
+                              <div class="col-md-4 pl-1">
+                                <div class="form-group">
+                                  <label>Postal Code</label>
+                                  <input type="number" class="form-control" placeholder="ZIP Code" [(ngModel)]="postal_code" name="postal_code">
+                                </div>
+                              </div>
+                            </div>
+                        <!-- <button mat-raised-button type="submit" class="btn btn-danger pull-right" value="{{valbutton}}">Submit</button>
+                        <div class="clearfix"></div> -->
+                    <!-- </form> -->
+
+          <div>
+              <!-- <button mat-button matStepperNext>Next</button> -->
+          </div>
+        </mat-step>
+        
+        <mat-step>
+            <ng-template matStepLabel>Health Information</ng-template>
+            <!-- <form #userForm="ngForm" (ngSubmit)="onSave(userForm.value)"> -->
+                <ng-template matStepLabel>Health Information</ng-template>
+                <div class="row">
+                    <div class="col-md-4 pr-1">
+                      <div class="form-group">
+                        <label>Any Long Disease</label>
+                        <input type="text" class="form-control" placeholder="If any" value="" [(ngModel)]="diesease" name="diesease">
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label>Regular Medicines</label>
+                        <input type="text" class="form-control" placeholder="Name of Medicine" [(ngModel)]="medicine" name="medicine"> 
+                      </div>
+                    </div>
+                    <div class="col-md-4 px-1">
+                      <div class="form-group">
+                        <label>Any Allergies</label>
+                        <input type="text" class="form-control" placeholder="If Any" name="allergies" value="" [(ngModel)]="allergies" >
+                      </div>
+                    </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pr-1">
+                  <div class="form-group">
+                    <label>Blood Group</label>
+                    <input type="text" class="form-control" placeholder=" " value="" [(ngModel)]="blood_group" name="blood_group">
+                  </div>
+                </div>
+                <div class="col-md-4 px-1">
+                  <div class="form-group">
+                    <label>Height</label>
+                    <input type="text" class="form-control" placeholder="(in cm)" [(ngModel)]="height" name="height"> 
+                  </div>
+                </div>
+                <div class="col-md-4 px-1">
+                  <div class="form-group">
+                    <label>Weight</label>
+                    <input type="text" class="form-control" placeholder="(in Kg)" name="weight" value="" [(ngModel)]="weight" >
+                  </div>
+                </div>
+        </div>
+               
+                
+    
+                
+            <!-- </form> -->
+            <div>
+                <button color="warn" mat-button matStepperPrevious>Back</button>
+                <!-- <button mat-button matStepperNext>Next</button> -->
+            </div>
+
+        </mat-step>
+        <mat-step>
+          <ng-template matStepLabel>Family History</ng-template>
+          <!-- <form #userForm="ngForm" (ngSubmit)="onSave(userForm.value)"> -->
+              <mat-accordion multi="true">
+                  <mat-expansion-panel>
+                    <mat-expansion-panel-header>
+                      <mat-panel-title>
+                        Father's Details
+                      </mat-panel-title>
+                      <!-- <mat-panel-description>
+                        Type your name and age
+                      </mat-panel-description> -->
+                    </mat-expansion-panel-header>
+                
+                    <div class="row">
+                        <div class="col-md-6 pr-1">
+                          <div class="form-group">
+                            <label>First Name</label>
+                            <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="f_first_name" name="f_first_name">
+                          </div>
+                        </div>
+                        <div class="col-md-6 pl-1">
+                          <div class="form-group">
+                            <label>Last Name</label>
+                            <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="f_last_name" name="f_last_name">
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                              <div class="col-md-4 pr-1">
+                                <div class="form-group">
+                                  <label for="birth_date">Birth Date</label>
+                                  <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="f_birth_date" name="f_birth_date">
+                                </div>
+                              </div>
+                              <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                  <label>Blood Group</label>
+                                  <input type="text" class="form-control" required="" placeholder="(in cm)" [(ngModel)]="f_blood_group" name="f_blood_group"> 
+                                </div>
+                              </div>
+                              <div class="col-md-4 px-1">
+                                <div class="form-group">
+                                  <label>Any Illness</label> 
+                                      <input type="text" class="form-control" placeholder="" [(ngModel)]="f_illness" name="f_illness">
+                                </div>
+                              </div>
+                      </div>
+                  </mat-expansion-panel><br>
+                  <mat-expansion-panel>
+                      <mat-expansion-panel-header>
+                        <mat-panel-title>
+                          Mother's Details
+                        </mat-panel-title>
+                        <!-- <mat-panel-description>
+                          Type your name and age
+                        </mat-panel-description> -->
+                      </mat-expansion-panel-header>
+                  
+                      <div class="row">
+                          <div class="col-md-6 pr-1">
+                            <div class="form-group">
+                              <label>First Name</label>
+                              <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="m_first_name" name="m_first_name">
+                            </div>
+                          </div>
+                          <div class="col-md-6 pl-1">
+                            <div class="form-group">
+                              <label>Last Name</label>
+                              <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="m_last_name" name="m_last_name">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                                <div class="col-md-4 pr-1">
+                                  <div class="form-group">
+                                    <label for="birth_date">Birth Date</label>
+                                    <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="m_birth_date" name="m_birth_date">
+                                  </div>
+                                </div>
+                                <div class="col-md-4 px-1">
+                                  <div class="form-group">
+                                    <label>Blood Group</label>
+                                    <input type="text" class="form-control" required="" placeholder="(in cm)" [(ngModel)]="m_blood_group" name="m_blood_group"> 
+                                  </div>
+                                </div>
+                                <div class="col-md-4 px-1">
+                                  <div class="form-group">
+                                    <label>Any Illness*</label>
+                                    <input type="text" class="form-control" placeholder="" [(ngModel)]="m_illness" name="m_illness">
+                                  </div>
+                                </div>
+                        </div>
+                    </mat-expansion-panel>
+                </mat-accordion>
+            <!-- <fieldset><strong> Father's Details </strong>
+              <div class="row">
+                <div class="col-md-6 pr-1">
+                  <div class="form-group">
+                    <label>First Name</label>
+                    <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="f_first_name" name="f_first_name">
+                  </div>
+                </div>
+                <div class="col-md-6 pl-1">
+                  <div class="form-group">
+                    <label>Last Name</label>
+                    <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="f_last_name" name="f_last_name">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                      <div class="col-md-4 pr-1">
+                        <div class="form-group">
+                          <label for="birth_date">Birth Date</label>
+                          <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="f_birth_date" name="f_birth_date">
+                        </div>
+                      </div>
+                      <div class="col-md-4 px-1">
+                        <div class="form-group">
+                          <label>Blood Group</label>
+                          <input type="text" class="form-control" required="" placeholder="(in cm)" [(ngModel)]="f_blood_group" name="f_blood_group"> 
+                        </div>
+                      </div>
+                      <div class="col-md-4 px-1">
+                        <div class="form-group">
+                          <label>Any Illness*</label> <div class="form-control">
+                          <mat-checkbox name="illness_y" [(ngModel)]="illness_y" value="yes" >Yes</mat-checkbox>&nbsp; &nbsp;
+                          <mat-checkbox name="illness_n" [(ngModel)]="illness_n" value="no" >No</mat-checkbox></div>
+                        </div>
+                      </div>
+              </div>
+            
+              </fieldset>
+              <br><fieldset> <strong>Mother's Details</strong><br>
+                <div class="row">
+                  <div class="col-md-6 pr-1">
+                    <div class="form-group">
+                      <label>First Name</label>
+                      <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="f_first_name" name="f_first_name">
+                    </div>
+                  </div>
+                  <div class="col-md-6 pl-1">
+                    <div class="form-group">
+                      <label>Last Name</label>
+                      <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="f_last_name" name="f_last_name">
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                        <div class="col-md-4 pr-1">
+                          <div class="form-group">
+                            <label for="birth_date">Birth Date</label>
+                            <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="f_birth_date" name="f_birth_date">
+                          </div>
+                        </div>
+                        <div class="col-md-4 px-1">
+                          <div class="form-group">
+                            <label>Blood Group</label>
+                            <input type="text" class="form-control" required="" placeholder="(in cm)" [(ngModel)]="f_blood_group" name="f_blood_group"> 
+                          </div>
+                        </div>
+                        <div class="col-md-4 px-1">
+                          <div class="form-group">
+                            <label>Any Illness*</label> <div class="form-control">
+                            <mat-checkbox name="illness_y" [(ngModel)]="illness_y" value="yes" >Yes</mat-checkbox>&nbsp; &nbsp;
+                            <mat-checkbox name="illness_n" [(ngModel)]="illness_n" value="no" >No</mat-checkbox></div>
+                          </div>
+                        </div>
+                </div>
+                </fieldset> --><br>
+              <button mat-raised-button type="submit" class="btn btn-danger pull-right" value="{{valbutton}}">Submit</button>
+              <div class="clearfix"></div>
+          <!-- </form> -->
+          <div>
+              <button mat-button color="warn" matStepperPrevious>Back</button>
+              <!-- <button mat-button matStepperNext>Next</button> -->
+          </div>
+
+      </mat-step>
+        <!-- <mat-step>
+            <ng-template matStepLabel>Submit</ng-template>
+            <button mat-raised-button type="submit" class="btn btn-danger pull-right" value="{{valbutton}}">Submit</button>
+                <div class="clearfix"></div>
+            <div>
+                <button mat-button matStepperPrevious>Back</button>
+              
+            </div>
+
+        </mat-step> -->
+      </mat-horizontal-stepper>
+            </form>
+      <!-- <form #userForm="ngForm" (ngSubmit)="onSave(userForm.value)">
+        <div class="row">
+                  <div class="col-md-4 pr-1">
+                    <div class="form-group">
+                      <label>Enrollment no.</label>
+                      <input type="text" class="form-control" disabled="" placeholder="Auto-Generated" value="" [(ngModel)]="enr_no" name="enr_no">
+                    </div>
+                  </div>
+                  <div class="col-md-4 px-1">
+                    <div class="form-group">
+                      <label>Standard</label>
+                      <input type="text" class="form-control" placeholder="Standard" value="" [(ngModel)]="std" name="std"> 
+                    </div>
+                  </div>
+                  <div class="col-md-4 px-1">
+                    <div class="form-group">
+                      <label>Division</label>
+                      <input type="text" class="form-control" placeholder="Division" name="div" value="" [(ngModel)]="div" name="div">
+                    </div>
+                  </div>
+          </div>
+          <div class="row">
+              <div class="col-md-6 pr-1">
+                <div class="form-group">
+                  <label>First Name</label>
+                  <input type="text" class="form-control" placeholder="FirSt Name" value="Mike" [(ngModel)]="first_name" name="first_name">
+                </div>
+              </div>
+              <div class="col-md-6 pl-1">
+                <div class="form-group">
+                  <label>Last Name</label>
+                  <input type="text" class="form-control" placeholder="Last Name" value="Andrew" [(ngModel)]="last_name" name="last_name">
+                </div>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col-md-4 pr-1">
+                  <div class="form-group">
+                    <label for="email">Email address</label>
+                    <input name="email" id="email" type="email" class="form-control" placeholder="Email" [(ngModel)]="email" name="email">
+                  </div>
+                </div>
+                <div class="col-md-4 px-1">
+                  <div class="form-group">
+                    <label for="birth_date">Birth Date</label>
+                    <input name="birth_date" id="birth_date" type="date" class="form-control" placeholder="" [(ngModel)]="birth_date" name="birth_date">
+                  </div>
+                </div>
+                <div class="col-md-4 px-1">
+                  <div class="form-group">
+                    <label for="admission_date">Admission Date</label>
+                    <input name="admissio_date" id="admission_date" type="date" class="form-control" placeholder="" [(ngModel)]="admission_date" name="admission_date">
+                  </div>
+                </div>
+              </div>
+              
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="form-group">
+                    <label>Address</label>
+                    <input type="text" class="form-control" placeholder="Home Address" value="Bld Mihail Kogalniceanu, nr. 8 Bl 1, Sc 1, Ap 09" [(ngModel)]="address" name="address">
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-4 pr-1">
+                  <div class="form-group">
+                    <label>City</label>
+                    <input type="text" class="form-control" placeholder="City" value="Mike" [(ngModel)]="city" name="city">
+                  </div>
+                </div>
+                <div class="col-md-4 px-1">
+                  <div class="form-group">
+                    <label>Country</label>
+                    <input type="text" class="form-control" placeholder="Country" value="Andrew" [(ngModel)]="country" name="country">
+                  </div>
+                </div>
+                <div class="col-md-4 pl-1">
+                  <div class="form-group">
+                    <label>Postal Code</label>
+                    <input type="number" class="form-control" placeholder="ZIP Code" [(ngModel)]="postal_code" name="po">
+                  </div>
+                </div>
+              </div>
+          <button mat-raised-button type="submit" class="btn btn-danger pull-right" value="{{valbutton}}">Submit</button>
+          <div class="clearfix"></div>
+      </form> -->
+
+
+          
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-4">
+      <div class="card card-user">
+        <div class="image">
+          <img src="../assets/img/bg5.jpg" alt="...">
+        </div>
+        <div class="card-body">
+          <div class="author">
+            <a href="#">
+              <img class="avatar border-gray" src="../assets/img/mike.jpg" alt="...">
+              <h5 class="title">Mike Andrew</h5>
+            </a>
+            <p class="description">
+              michael24
+            </p>
+          </div>
+          <p class="description text-center">
+            "Lamborghini Mercy
+            <br> Your chick she so thirsty
+            <br> I'm in that two seat Lambo"
+          </p>
+        </div>
+        <hr>
+        <div class="button-container">
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-facebook-f"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-twitter"></i>
+          </button>
+          <button href="#" class="btn btn-neutral btn-icon btn-round btn-lg">
+            <i class="fab fa-google-plus-g"></i>
+          </button>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>

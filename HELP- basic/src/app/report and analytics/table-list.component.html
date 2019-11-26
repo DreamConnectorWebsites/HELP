@@ -1,0 +1,192 @@
+<div class="panel-header panel-header-sm">
+</div>
+<div class="main-content">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card">
+        <div class="card-header">
+          <h4 class="card-title"> Student Details</h4>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table table-responsive" >
+              <thead class=" text-primary">            
+                      <tr>
+                        <td>Enrollment No.</td>  
+                        <td>Name</td>  
+                        <td>Email</td>  
+                        <td>Birth Date</td>  
+                        <td>Admission Date</td>  
+                        <td>Address</td>  
+                        <td>City</td>  
+                        <td>Country</td>  
+                        <td>Postal Code</td>
+                        <td>Father Name</td> 
+                        <td>Father Birth Date</td>
+                        <td>Father's Illness</td>
+                        <td>Father's Blood Group</td>
+                        <td>Mother Name</td> 
+                        <td>Mother Birth Date</td>
+                        <td>Mother's Illness</td>
+                        <td>Mother's Blood Group</td>
+                      </tr>  
+              </thead>
+              <tbody>
+                  <tr *ngFor="let kk of Repdata;let ind = index">  
+                           
+                      <td>{{ind + 1}}</td>  
+                      <td>{{kk.first_name}} {{kk.lastname}}</td>  
+                      <td>{{kk.email}}</td>  
+                      <td>{{kk.birth_date}}</td> 
+                      <td>{{kk.admission_date}}</td>  
+                      <td>{{kk.address}}</td> 
+                      <td>{{kk.city}}</td> 
+                      <td>{{kk.country}}</td>  
+                      <td>{{kk.postal_code}}</td>
+                      <td>{{kk.f_first_name}} {{kk.f_last_name}}</td>
+                      <td>{{kk.f_birth_date}}</td>
+                      <td>{{kk.f_blood_group}}</td>
+                      <td>{{kk.f_illness}}</td>
+                      <td>{{kk.m_first_name}} {{kk.m_last_name}}</td>
+                      <td>{{kk.m_birth_date}}</td>
+                      <td>{{kk.m_blood_group}}</td>
+                      <td>{{kk.m_illness}}</td>
+                      <!-- <td><a (click)="edit(kk)" style="color:blueviolet">Edit</a></td>  
+                      <td><a (click)="delete(kk._id)" style="color:blueviolet">Delete</a>  </td>   -->
+                    </tr>  
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div class="col-md-12">
+      <div class="card card-plain">
+        <div class="card-header">
+          <h4 class="card-title"> Table on Plain Background</h4>
+          <p class="category"> Here is a subtitle for this table</p>
+        </div>
+        <div class="card-body">
+          <div class="table-responsive">
+            <table class="table">
+              <thead class=" text-primary">
+                <th>
+                  Name
+                </th>
+                <th>
+                  Country
+                </th>
+                <th>
+                  City
+                </th>
+                <th class="text-right">
+                  Salary
+                </th>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    Dakota Rice
+                  </td>
+                  <td>
+                    Niger
+                  </td>
+                  <td>
+                    Oud-Turnhout
+                  </td>
+                  <td class="text-right">
+                    $36,738
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Minerva Hooper
+                  </td>
+                  <td>
+                    Curaçao
+                  </td>
+                  <td>
+                    Sinaai-Waas
+                  </td>
+                  <td class="text-right">
+                    $23,789
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Sage Rodriguez
+                  </td>
+                  <td>
+                    Netherlands
+                  </td>
+                  <td>
+                    Baileux
+                  </td>
+                  <td class="text-right">
+                    $56,142
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Philip Chaney
+                  </td>
+                  <td>
+                    Korea, South
+                  </td>
+                  <td>
+                    Overland Park
+                  </td>
+                  <td class="text-right">
+                    $38,735
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Doris Greene
+                  </td>
+                  <td>
+                    Malawi
+                  </td>
+                  <td>
+                    Feldkirchen in Kärnten
+                  </td>
+                  <td class="text-right">
+                    $63,542
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Mason Porter
+                  </td>
+                  <td>
+                    Chile
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $78,615
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    Jon Porter
+                  </td>
+                  <td>
+                    Portugal
+                  </td>
+                  <td>
+                    Gloucester
+                  </td>
+                  <td class="text-right">
+                    $98,615
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div> -->
+  </div>
+</div>
